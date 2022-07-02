@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/search_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/custom_toolbar_back_arrow_search"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search Dishes"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="12dp"
+            android:layout_toStartOf="@id/custom_toolbar_cart_icon_search"
+            android:layout_toEndOf="@id/custom_toolbar_back_arrow_search"
+            android:iconifiedByDefault="false"/>
+
+<!--        <EditText-->
+<!--            android:id="@+id/search_edit_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:imeOptions="actionSearch"-->
+<!--            android:hint="Search Dishes"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:layout_toLeftOf="@id/custom_toolbar_cart_icon_search"-->
+<!--            android:layout_toRightOf="@id/custom_toolbar_back_arrow_search"-->
+<!--            android:gravity="center_vertical"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:inputType="text"/>-->
+
+        <ImageView
+            android:id="@+id/custom_toolbar_cart_icon_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_shopping_cart_24"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/search_activity_nothing_found_image"
+        android:layout_below="@id/search_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        android:src="@drawable/nothingfound" />
+
+    <TextView
+        android:id="@+id/search_activity_nothing_found_text"
+        android:layout_below="@id/search_activity_nothing_found_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:text="Nothing Matches to your search"/>
+
+
+    <LinearLayout
+        android:id="@+id/search_activity_searching_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_below="@id/search_activity_toolbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="&lt;&lt;-- RECENT SEARCHES --&gt;&gt;"/>
+
+        <LinearLayout
+            android:id="@+id/search_activity_nothing_match_in_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/nothing_found_in_history"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="No match found in recent searches"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/my_list"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/delete_Button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="26dp"
+            android:layout_gravity="end"
+            android:text="clear history"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/search_activity_list_view"
+        android:layout_below="@id/search_activity_toolbar"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/search_activity_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

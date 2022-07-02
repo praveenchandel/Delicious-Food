@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmOrderActivity">
+
+    <ProgressBar
+        android:id="@+id/confirm_order_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_confirm_activity"
+        android:background="#F80055"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Shipment Details" />
+
+
+    <EditText
+        android:id="@+id/shipment_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_confirm_activity"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="your Name"
+        />
+
+    <EditText
+        android:id="@+id/shipment_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_name"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:hint="mobile number"
+        />
+
+    <EditText
+        android:id="@+id/shipment_address_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_phone_number"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Address Line 1"
+        />
+
+    <TextView
+        android:id="@+id/shipment_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_address_line1"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/confirm_order_notice_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipment_address"
+        android:text="* you can change delivery address from your profile"
+        android:layout_marginLeft="20dp"
+        android:textColor="#F44336"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/confirm_order_standard_delivery_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirm_order_notice_text"
+        android:layout_marginStart="16dp"
+        android:text="standard delivery"/>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/confirm_order_switch"
+        android:layout_below="@id/confirm_order_standard_delivery_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Want Instant Delivery"/>
+
+    <TextView
+        android:id="@+id/confirm_order_instant_extra_charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="price"
+        android:textColor="#000"
+        android:visibility="gone"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/confirm_order_standard_delivery_description"/>
+
+    <TextView
+        android:id="@+id/confirm_order_instant_delivery_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_below="@id/confirm_order_instant_extra_charge"
+        android:layout_marginStart="16dp"
+        android:text="details"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="6dp"
+        android:layout_above="@id/accepting_orders_notice">
+
+        <TextView
+            android:id="@+id/confirm_order_price_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price Details"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_price_details"
+            android:text="Price"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/confirm_order_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_price_details"
+            android:gravity="end"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_price"
+            android:text="Discount"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/confirm_order_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_price"
+            android:gravity="end"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_discount"
+            android:text="Delivery Charges"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/confirm_order_delivery_charges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_discount"
+            android:gravity="end"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_delivery_charges"
+            android:text="Total Amount"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/confirm_order_total_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm_order_delivery_charges"
+            android:gravity="end"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/accepting_orders_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#F44336"
+        android:gravity="center_horizontal"
+        android:layout_above="@id/confirm_final_order_btn" />
+
+
+    <Button
+        android:id="@+id/confirm_final_order_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/safeAndSecurePaymentsLayout"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginBottom="4dp"
+        android:text="Pay"
+        android:textAllCaps="false"
+        android:enabled="false"
+        android:visibility="invisible"
+        android:background="@drawable/curve_shape"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/safeAndSecurePaymentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:src="@drawable/ic_baseline_security_24"/>
+
+        <TextView
+            android:id="@+id/safeAndSecurePayments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#000"
+            android:text="Safe and Secure Payments."/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

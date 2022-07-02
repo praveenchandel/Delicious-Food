@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#6200EE</color>-->
+
+    <color name="colorPrimary">#F80055</color>
+    <color name="colorPrimaryDark">#F80055</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="blue">#191CD5</color>
+
+<!--    for reviews -->
+    <color name="star_one">#FF0000</color>
+    <color name="star_two">#EC952C</color>
+    <color name="star_three">#FFFF00</color>
+    <color name="star_four">#00FF00</color>
+    <color name="star_five">#07AE07</color>
+
+    <color name="colorPrimary1">#0099ff</color>
+    <color name="colorPrimaryDark1">#0099ff</color>
+    <color name="colorAccent1">#D81B60</color>
+
+<!--    for collapsing toolbar-->
+    <color name="colorPrimaryCollapsing">#a51e22</color>
+    <color name="colorPrimaryDarkCollapsing">#800000</color>
+    <color name="colorAccentCollapsing">#03DAC5</color>
+
+
+
+</resources>

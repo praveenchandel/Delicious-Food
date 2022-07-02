@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RestaurantReviewActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ratings &amp; Reviews"
+                android:layout_marginLeft="10dp"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/restaurant_details_give_product_rating"
+                android:layout_width="140dp"
+                android:layout_height="38dp"
+                android:text="Rate It"
+                android:backgroundTint="#03A9F4"
+                android:textColor="@color/white"
+                android:background="@drawable/button_1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/restaurant_details_over_all_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0.0"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="#000"/>
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:id="@+id/restaurant_ratingBar"
+                android:stepSize="0.1"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/restaurant_details_total_ratings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Reviews Yet"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="#000000" />
+
+            <ProgressBar
+                android:id="@+id/restaurant_details_five_star_progressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:progressTint="@color/star_five"
+                android:max="100"
+                android:progress="5"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_five_star_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="#000000" />
+
+            <ProgressBar
+                android:id="@+id/restaurant_details_four_star_progressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:progressTint="@color/star_four"
+                android:max="100"
+                android:progress="5"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_four_star_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="#000000" />
+
+            <ProgressBar
+                android:id="@+id/restaurant_details_three_star_progressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:progressTint="@color/star_three"
+                android:max="100"
+                android:progress="5"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_three_star_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="#000000" />
+
+            <ProgressBar
+                android:id="@+id/restaurant_details_two_star_progressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:progressTint="@color/star_two"
+                android:max="100"
+                android:progress="5"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_two_star_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="#000000" />
+
+            <ProgressBar
+                android:id="@+id/restaurant_details_one_star_progressBar"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:progressTint="@color/star_one"
+                android:max="100"
+                android:progress="5"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_one_star_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="#000000"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/restaurant_details_see_all_ratings_button"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="All ratings and reviews"
+            android:textAllCaps="false"
+            android:backgroundTint="#03A9F4"
+            android:textColor="@color/white"
+            android:background="@drawable/button_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/restaurant_details_user_review_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:text="Your Review"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="You"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_review_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:isIndicator="true"
+                android:id="@+id/restaurant_user_ratingBar"
+                android:stepSize="0.1"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_review_delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/colorPrimary"
+                android:text="Delete"/>
+
+            <TextView
+                android:id="@+id/restaurant_details_review_edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:textColor="#03A9F4"
+                android:layout_toLeftOf="@id/restaurant_details_review_delete_button"
+                android:text="Edit"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/restaurant_details_user_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

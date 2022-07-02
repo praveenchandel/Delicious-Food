@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/offers_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:textColor="#B4000000"
+            android:textSize="22sp"
+            android:text="Offers with minimum Off"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/offer_one_image"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_width="0dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/all_offers" />
+
+            <ImageView
+                android:id="@+id/offer_two_image"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_width="0dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/five_percent_off" />
+
+            <ImageView
+                android:id="@+id/offer_three_image"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_width="0dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ten_percent_off" />
+
+            <ImageView
+                android:id="@+id/offer_four_image"
+                android:layout_weight="1"
+                android:layout_height="65dp"
+                android:layout_width="0dp"
+                android:layout_margin="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/fifteen_percent_off" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold"
+            android:textColor="#B4000000"
+            android:textSize="22sp"
+            android:text="All restaurants around you"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/restaurant_details_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="8dp"
+        app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curve_shape"
+        android:orientation="vertical">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/restaurant_image_view"
+        android:layout_width="match_parent"
+        app:shapeAppearanceOverlay="@drawable/curve_shape"
+        android:src="@drawable/food_for_you"
+        android:scaleType="centerCrop"
+        android:layout_height="200dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:id="@+id/restaurant_name_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/home_activity_star_image"
+                android:textColor="#000"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:text="restaurant name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/restaurants_total_ratings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9dp"
+                android:layout_marginTop="2dp"
+                android:textColor="#000"
+                android:layout_alignParentEnd="true"
+                android:text=" - "/>
+
+            <ImageView
+                android:id="@+id/home_activity_star_image"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@id/restaurants_total_ratings"
+                app:srcCompat="@android:drawable/btn_star_big_off"
+                app:tint="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/restaurant_about_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="hello"
+                android:layout_below="@id/restaurant_name_text"
+                android:layout_marginBottom="6dp"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/restaurant_currently_not_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginEnd="16dp"
+                android:text="Currently not Available"
+                android:visibility="gone"
+                android:layout_below="@id/restaurant_name_text"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="6dp"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

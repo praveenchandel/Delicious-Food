@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/order_history_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:id="@+id/order_history_customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:textSize="15dp"
+            android:layout_marginLeft="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_history_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="price"
+            android:textAlignment="viewEnd"
+            android:textSize="15dp"
+            android:layout_marginRight="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_history_ordered_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:layout_below="@+id/order_history_customer_name"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="16dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="@string/menu_cart" />
+        <item
+            android:id="@+id/nav_shop_by_category"
+            android:icon="@drawable/ic_baseline_restaurant_24"
+            android:title="@string/menu_search" />
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_baseline_open_in_browser_24"
+            android:title="@string/menu_orders" />
+
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_baseline_account_box_24"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/nav_rules"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="@string/menu_rules" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_baseline_share_24"
+            android:title="@string/menu_share" />
+
+        <item
+            android:id="@+id/nav_rate_app"
+            android:icon="@drawable/ic_baseline_star_rate_24"
+            android:title="@string/menu_rate_app" />
+
+        <item
+            android:id="@+id/nav_contact_support"
+            android:icon="@drawable/ic_baseline_connect_without_contact_24"
+            android:title="@string/menu_contact_us" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/menu_about_us" />
+
+        <item
+            android:id="@+id/nav_report_bug"
+            android:icon="@drawable/ic_baseline_bug_report_24"
+            android:title="@string/menu_report_bug" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

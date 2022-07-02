@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_toolbar"
+        android:background="#F80055"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Profile" />
+
+    <LinearLayout
+        android:layout_below="@id/profile_toolbar"
+        android:id="@+id/layout_h"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/user_profile"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/delicus_food" />
+
+        <EditText
+            android:id="@+id/change_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="phone number"
+            android:inputType="number"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/change_fullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_address"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/profile_activity_user_upi_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:hint="UPI Id"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorPrimary"
+            android:text="* In case of refund this amount will we refunded to this UPI ID"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/close_Setting"
+        android:layout_weight="1"
+        android:layout_height="38dp"
+        android:text="Cancel"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/button_1"
+        android:textAllCaps="false"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content" />
+
+    <Button
+        android:id="@+id/update_Setting"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:background="@drawable/button_1"
+        android:layout_marginStart="5dp"
+        android:textAllCaps="false"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@color/white"
+        android:layout_weight="1"
+        android:text="Update"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

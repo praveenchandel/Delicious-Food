@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OfffersActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_all_available_offers"
+        android:background="#F80055"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="All Available Offers" />
+
+    <ImageView
+        android:id="@+id/offers_activity_nothing_found_image"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="250dp"
+        android:visibility="gone"
+        android:src="@drawable/nothingfound" />
+
+    <TextView
+        android:id="@+id/offers_activity_nothing_found_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:text="No offer Found"/>
+
+    <ListView
+        android:id="@+id/offers_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>

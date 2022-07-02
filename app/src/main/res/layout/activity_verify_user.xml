@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".verifyUser">
+
+    <TextView
+        android:layout_marginTop="250dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:text="Please verify your mail id, then login again"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:text="If you are using other email than Gmail"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_gravity="center_horizontal"
+        android:text="Then it may take up to 60 min. to get verification link"/>
+
+    <Button
+        android:id="@+id/verify_user_send_verification_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/curve_shape"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:text="send verification link to mail"/>
+
+    <Button
+        android:id="@+id/verify_user_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/curve_shape"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:text="logout"/>
+
+</LinearLayout>

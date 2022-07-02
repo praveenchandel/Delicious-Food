@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AboutUs">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/founder_praveen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:text="Praveen Chandel"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/praveen_card_view"
+            android:layout_below="@id/founder_praveen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                app:shapeAppearanceOverlay="@drawable/curve_shape"
+                android:src="@drawable/praveen"
+                android:scaleType="centerInside"
+                android:layout_height="550dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/cofounder_title"
+            android:layout_below="@id/praveen_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:text="Developer"/>
+
+        <TextView
+            android:id="@+id/praveen_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cofounder_title"
+            android:layout_marginStart="25dp"
+            android:text="Final year, CSE, NIT Jamshedpur"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/praveen_contact"
+            android:layout_below="@id/praveen_branch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:textColor="#000"
+            android:text="Contact : praveenchandel87695@gmail.com"/>
+
+    </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

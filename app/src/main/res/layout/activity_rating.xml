@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RatingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_rating_activity"
+        android:background="#F80055"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Give Rating" />
+
+    <RatingBar
+        android:id="@+id/rating_activity_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_rating_activity"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="60dp"
+        android:stepSize="1" />
+
+    <EditText
+        android:id="@+id/rating_activity_review_editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_activity_ratingBar"
+        android:layout_margin="16dp"
+        android:hint="write review"/>
+
+    <Button
+        android:id="@+id/rating_activity_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_below="@id/rating_activity_review_editText"
+        android:text="submit"
+        android:background="@drawable/button_1"
+        android:textAllCaps="false"
+        android:backgroundTint="#03A9F4"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/colorPrimary"
+        android:text="* Ratings are public your name will be visible to everyone."/>
+
+</RelativeLayout>

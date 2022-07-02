@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Delicious Food</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_cart">Cart</string>
+    <string name="menu_search">Shop by Category</string>
+    <string name="menu_search1">Shop by Restaurants</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_rules">Rules and T&amp;C</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_rate_app">Rate Us</string>
+    <string name="menu_contact_us">Contact / Support</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_report_bug">Report Bug</string>
+    <string name="menu_orders">My Orders</string>
+
+    <string-array name="addresses">
+        <item>_</item>
+        <item>"AIIMS Jodhpur "</item>
+        <item>"Dr. SN MC Jodhpur "</item>
+        <item>DSRRAU, Jodhpur</item>
+        <item>FDDI, Jodhpur</item>
+        <item>IIT, Jodhpur</item>
+        <item>NIFT, Jodhpur</item>
+        <item>NLU, Jodhpur</item>
+        <item>"NIT Jamshedpur"</item>
+        <item>"NIT Durgapur"</item>
+    </string-array>
+</resources>
